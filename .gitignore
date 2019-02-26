@@ -29,3 +29,6 @@ Temporary Items
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Settings Exclusions
+settings.json
