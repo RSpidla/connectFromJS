@@ -13,7 +13,6 @@ const knex = require('knex')({
 const moment = require('moment');
 const person = process.argv[2];
 const formatBirthdate = (birthdate) => moment(birthdate).format('YYYY-MM-DD');
-
 knex.from('famous_people').select()
 .where({ 'first_name': person }).orWhere({ 'last_name': person })
 .then((rows) => {
