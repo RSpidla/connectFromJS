@@ -1,9 +1,7 @@
 // Update with your config settings.
 const pg = require("pg");
 const settings = require("./settings");
-
 module.exports = {
-
   development: {
     client : 'pg',
     connection: {
