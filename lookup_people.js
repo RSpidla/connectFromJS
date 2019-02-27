@@ -3,9 +3,7 @@ const moment = require('moment');
 const settings = require('./settings.json');
 const person = process.argv[2];
 const client = new pg.Client(settings);
-
 const formatBirthdate = (birthdate) => moment(birthdate).format('YYYY-MM-DD');
-
 client.connect((err) => {
   if (err) {
     return console.error("Connection Error", err);
