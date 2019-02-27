@@ -1,3 +1,4 @@
+const settings = require('./settings.json');
 const knex = require('knex')({
   client: 'pg',
   connection: {
