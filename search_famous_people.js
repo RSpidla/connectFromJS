@@ -1,13 +1,14 @@
 const knex = require('knex')({
   client: 'pg',
   connection: {
-    host    : '127.0.0.1',
-    user    : 'development',
-    password  : 'development',
-    database  : 'test_db'
+    user:       settings.user,
+    password:   settings.password,
+    database:   settings.database,
+    host:       settings.hostname,
+    port:       settings.port,
+    ssl:        settings.ssl
   }
 });
-
 const moment = require('moment');
 const person = process.argv[2];
 const formatBirthdate = (birthdate) => moment(birthdate).format('YYYY-MM-DD');
